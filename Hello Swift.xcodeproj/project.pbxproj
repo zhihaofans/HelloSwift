@@ -52,6 +52,9 @@
 		26DF0E5D2C6E5BC400B4A8B3 /* Hello Swift */ = {
 			isa = PBXGroup;
 			children = (
+				26DF0E6F2C6E5C9000B4A8B3 /* Models */,
+				26DF0E6E2C6E5C8500B4A8B3 /* Services */,
+				26DF0E6D2C6E5C7E00B4A8B3 /* Views */,
 				26DF0E5E2C6E5BC400B4A8B3 /* Hello_SwiftApp.swift */,
 				26DF0E602C6E5BC400B4A8B3 /* ContentView.swift */,
 				26DF0E622C6E5BC500B4A8B3 /* Assets.xcassets */,
@@ -67,6 +70,27 @@
 				26DF0E662C6E5BC500B4A8B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26DF0E6D2C6E5C7E00B4A8B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		26DF0E6E2C6E5C8500B4A8B3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		26DF0E6F2C6E5C9000B4A8B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +298,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hello Swift";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +338,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hello Swift";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
