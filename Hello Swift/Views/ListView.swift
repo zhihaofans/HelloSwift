@@ -7,16 +7,28 @@
 
 import SwiftUI
 
+struct ListItemData: Identifiable {
+    var title: String
+    var view: () -> any View
+    var id: String
+}
+
 struct ListView: View {
     private let viewTitle = "列表"
-    @State var listViewData = []
+    @State var listViewData = [
+        ListItemData(title: "单一文本列表", view: { AnyView(EmptyView()) }),
+        ListItemData(title: "单一文本列表", view: { AnyView(EmptyView()) }),
+        ListItemData(title: "单一文本列表", view: { AnyView(EmptyView()) })
+    ]
     var body: some View {
         NavigationView {
-            //List {
+            // List {
             //    NavigationLink("列表", destination: ListView())
-            //}
-            List(listViewData) { it in
-                NavigationLink(it.title, destination: it.view)
+            // }
+            List(listViewData) { item in
+                NavigationLink(destination: item.view()) {
+                    Text(item.title)
+                }
             }
             .navigationTitle(viewTitle)
             .toolbar {
@@ -32,25 +44,15 @@ struct ListView: View {
                     }
                 }
             }
-        }.onAppear{
-            listViewData =[
-                ListItemData(title:"单一文本列表",view:EmptyView()),
-                ListItemData(title:"单一文本列表",view:EmptyView()),
-                ListItemData(title:"单一文本列表",view:EmptyView())
-            ]
         }
     }
 }
-class ListItemData{
-    var title: String
-    var view: View
-    var uuid: String
-    init(title: String,view: View){
-        self.title = title
-        self.view = view
-        self.uuid = UUID()
+
+// #Preview {
+//    ListView()
+// }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
-}
-#Preview {
-    ListView()
 }

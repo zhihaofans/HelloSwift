@@ -69,17 +69,17 @@ struct iosMainView: View {
 }
 
 struct EmptyView: View {
-    @state let image: UIImage?
+    @State var image: UIImage?
     var body: some View {
         VStack {
-            if image {
-                Image(uiImage: image)
+            if image != nil {
+                Image(uiImage: image!)
                     .resizable() // 允许图片可调整大小
                     .scaledToFit() // 图片将等比缩放以适应框架
                     .frame(width: 120, height: 120) // 设置视图框架的大小
                     .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous)) // 设置圆角矩形形状
                     .shadow(radius: 5) // 添加阴影以增强效果
-            }else{
+            } else {
                 Image(systemName: "globe")
                     .imageScale(.large)
                     .foregroundStyle(.tint)
