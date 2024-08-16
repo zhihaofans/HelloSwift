@@ -25,11 +25,7 @@ struct iosMainView: View {
         default:
             NavigationView {
                 List {
-                    NavigationLink("签到", destination: EmptyView())
-                    NavigationLink("稍后再看", destination: EmptyView())
-                    NavigationLink("历史记录", destination: EmptyView())
-                    // NavigationLink("动态", destination: HistoryView())
-                    NavigationLink("工具", destination: EmptyView())
+                    NavigationLink("列表", destination: ListView())
                 }
                 .navigationTitle(AppUtil().getAppName() /* "哔了个哩" */ )
                 .toolbar {

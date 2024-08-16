@@ -16,6 +16,7 @@
 		26DF0E782C6EDAF000B4A8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DF0E742C6EDAF000B4A8B3 /* Assets.xcassets */; };
 		26DF0E792C6EDAF000B4A8B3 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DF0E752C6EDAF000B4A8B3 /* playstore.png */; };
 		26DF0E7C2C6EDC8B00B4A8B3 /* SwiftUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 26DF0E7B2C6EDC8B00B4A8B3 /* SwiftUtils */; };
+		26DF0E7E2C6EDD9400B4A8B3 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DF0E7D2C6EDD9400B4A8B3 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		26DF0E732C6EDAF000B4A8B3 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		26DF0E742C6EDAF000B4A8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26DF0E752C6EDAF000B4A8B3 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
+		26DF0E7D2C6EDD9400B4A8B3 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		26DF0E6D2C6E5C7E00B4A8B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				26DF0E7D2C6EDD9400B4A8B3 /* ListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				26DF0E612C6E5BC400B4A8B3 /* ContentView.swift in Sources */,
 				26DF0E5F2C6E5BC400B4A8B3 /* Hello_SwiftApp.swift in Sources */,
+				26DF0E7E2C6EDD9400B4A8B3 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
