@@ -9,11 +9,14 @@ import SwiftUI
 
 struct ListView: View {
     private let viewTitle = "列表"
-    @State var listView = []
+    @State var listViewData = []
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink("列表", destination: ListView())
+            //List {
+            //    NavigationLink("列表", destination: ListView())
+            //}
+            List(listViewData) { it in
+                NavigationLink(it.title, destination: it.view)
             }
             .navigationTitle(viewTitle)
             .toolbar {
@@ -29,15 +32,23 @@ struct ListView: View {
                     }
                 }
             }
+        }.onAppear{
+            listViewData =[
+                ListItemData(title:"单一文本列表",view:EmptyView()),
+                ListItemData(title:"单一文本列表",view:EmptyView()),
+                ListItemData(title:"单一文本列表",view:EmptyView())
+            ]
         }
     }
 }
 class ListItemData{
     var title: String
     var view: View
+    var uuid: String
     init(title: String,view: View){
         self.title = title
         self.view = view
+        self.uuid = UUID()
     }
 }
 #Preview {
