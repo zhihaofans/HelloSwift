@@ -15,44 +15,64 @@ struct ListItemData: Identifiable {
 
 struct ListView: View {
     private let viewTitle = "列表"
-    @State var listViewData = [
-        ListItemData(title: "单一文本列表", view: { AnyView(EmptyView()) }),
-        ListItemData(title: "单一文本列表", view: { AnyView(EmptyView()) }),
-        ListItemData(title: "单一文本列表", view: { AnyView(EmptyView()) })
+    var body: some View {
+        List {
+            Section(header: Text("纯文本")) {
+                NavigationLink("单一文本列表", destination: SimpleTextView())
+                NavigationLink("单一文本列表", destination: SimpleTextView())
+            }
+        }
+        .navigationTitle(viewTitle)
+    }
+}
+
+struct SimpleTextView: View {
+    private let viewTitle = "单一文本列表"
+    @State var itemList = [
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
+        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
     ]
     var body: some View {
-        NavigationView {
-            // List {
-            //    NavigationLink("列表", destination: ListView())
-            // }
-            List(listViewData) { item in
-                NavigationLink(destination: item.view()) {
-                    Text(item.title)
-                }
+        List {
+            ForEach(itemList, id: \.title) { it in
+                SimpleTextItemView(title: it.title, detail: it.detail)
             }
-            .navigationTitle(viewTitle)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: EmptyView()) {
-                        // TODO: 这里跳转到个人页面或登录界面
-                        Image(systemName: "person")
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: EmptyView()) {
-                        Image(systemName: "gear")
-                    }
-                }
-            }
+        }
+        .navigationTitle(viewTitle)
+    }
+}
+
+struct SimpleTextItem: Identifiable {
+    let id = UUID()
+    let title: String
+    let detail: String
+}
+
+struct SimpleTextItemView: View {
+    var title: String
+    var detail: String
+
+    var body: some View {
+        HStack {
+            Text(title)
+            Spacer()
+            Text(detail).foregroundColor(.gray)
         }
     }
 }
 
-// #Preview {
-//    ListView()
-// }
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ListView()
 }

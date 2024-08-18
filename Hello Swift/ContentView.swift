@@ -22,6 +22,10 @@ struct iosMainView: View {
     @State private var selectedTab = 0
     var body: some View {
         switch selectedTab {
+        case 1:
+            EmptyView()
+        case 2:
+            EmptyView()
         default:
             NavigationView {
                 List {
