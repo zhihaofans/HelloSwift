@@ -40,7 +40,7 @@ struct iosMainView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: EmptyView()) {
+                        NavigationLink(destination: SettingView()) {
                             Image(systemName: "gear")
                         }
                     }

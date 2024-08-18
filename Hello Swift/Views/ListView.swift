@@ -60,18 +60,7 @@ struct SimpleTextItem: Identifiable {
     let detail: String
 }
 
-struct SimpleTextItemView: View {
-    var title: String
-    var detail: String
 
-    var body: some View {
-        HStack {
-            Text(title)
-            Spacer()
-            Text(detail).foregroundColor(.gray)
-        }
-    }
-}
 
 #Preview {
     ListView()
