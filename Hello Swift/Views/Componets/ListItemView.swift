@@ -22,16 +22,16 @@ struct SimpleTextItemView: View {
 
 struct iconAndTextItemView: View {
     var title: String
-    var detail: String
     var icon: String
 
     var body: some View {
         HStack {
-            Image(icon)
+            Image(systemName: icon)
             Text(title)
         }
     }
 }
+
 struct iconAndTextDetailItemView: View {
     var title: String
     var detail: String
@@ -39,7 +39,7 @@ struct iconAndTextDetailItemView: View {
 
     var body: some View {
         HStack {
-            Image(icon)
+            Image(systemName: icon)
             Text(title)
             Spacer()
             Text(detail).foregroundColor(.gray)

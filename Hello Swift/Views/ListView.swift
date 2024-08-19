@@ -34,14 +34,6 @@ struct SimpleTextView: View {
     private let viewTitle = "单一文本列表"
     @State var itemList = [
         "dasdasdasd23123",
-        "dasdasdasd23123",
-        "dasdasdasd23123",
-        "dasdasdasd23123",
-        "dasdasdasd23123",
-        "dasdasdasd23123",
-        "dasdasdasd23123",
-        "dasdasdasd23123",
-        "dasdasdasd23123",
     ]
     var body: some View {
         List {
@@ -54,21 +46,8 @@ struct SimpleTextView: View {
 }
 
 struct SimpleTextDetailView: View {
-    private let viewTitle = "单一文本列表"
+    private let viewTitle = "单行双文本列表"
     @State var itemList = [
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
-        SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
         SimpleTextItem(title: "14321313", detail: "dasdasdasd23123"),
     ]
     var body: some View {
@@ -82,7 +61,7 @@ struct SimpleTextDetailView: View {
 }
 
 struct MuitLineTextView: View {
-    private let viewTitle = "单一文本列表"
+    private let viewTitle = "双行文本列表"
     @State var itemList = [
         "dasdasdasd23123\ndasdasdasd23123\ndasdasdasd23123\ndasdasdasd23123",
         "dasdasdasd23123\ndasdasdasd23123",
@@ -103,16 +82,13 @@ struct MuitLineTextView: View {
         .navigationTitle(viewTitle)
     }
 }
+
 struct IconAndTextView: View {
     private let viewTitle = "图标文本列表"
     var body: some View {
         List {
-            iconAndTextItemView(title: "123", detail: "456", icon: "pencil.circle.fill")
-            iconAndTextItemView(title: "123", detail: "456", icon: "pencil.circle.fill")
-            iconAndTextItemView(title: "123", detail: "456", icon: "pencil.circle.fill")
-            iconAndTextItemView(title: "123", detail: "456", icon: "pencil.circle.fill")
-            iconAndTextItemView(title: "123", detail: "456", icon: "pencil.circle.fill")
-            iconAndTextItemView(title: "123", detail: "456", icon: "pencil.circle.fill")
+            iconAndTextItemView(title: "123", icon: "pencil.slash")
+            iconAndTextDetailItemView(title: "123", detail: "detail", icon: "pencil.circle.fill")
         }
         .navigationTitle(viewTitle)
     }
