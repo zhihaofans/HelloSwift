@@ -28,6 +28,7 @@ struct iosMainView: View {
                     Section("界面UI") {
                         NavigationLink("列表List", destination: ListView())
                         NavigationLink("弹窗Alert", destination: AlertView())
+                        NavigationLink("图片Image", destination: ImageView())
                     }
                     Section("功能API") {
                         Text("学习中")
