@@ -19,3 +19,18 @@ struct SimpleTextItemView: View {
         }
     }
 }
+
+struct iconAndTextItemView: View {
+    var title: String
+    var detail: String
+    var icon: String
+
+    var body: some View {
+        HStack {
+            Image(icon)
+            Text(title)
+            Spacer()
+            Text(detail).foregroundColor(.gray)
+        }
+    }
+}
