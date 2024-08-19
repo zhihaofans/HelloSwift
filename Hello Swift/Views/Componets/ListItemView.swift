@@ -29,6 +29,18 @@ struct iconAndTextItemView: View {
         HStack {
             Image(icon)
             Text(title)
+        }
+    }
+}
+struct iconAndTextDetailItemView: View {
+    var title: String
+    var detail: String
+    var icon: String
+
+    var body: some View {
+        HStack {
+            Image(icon)
+            Text(title)
             Spacer()
             Text(detail).foregroundColor(.gray)
         }
