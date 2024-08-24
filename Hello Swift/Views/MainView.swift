@@ -27,8 +27,10 @@ struct iosMainView: View {
                     NavigationLink("列表List", destination: ListView())
                     NavigationLink("弹窗Alert", destination: AlertView())
                     NavigationLink("图片Image", destination: ImageView())
+                    Text("学习中")
                 }
                 Section("功能API") {
+                    NavigationLink("剪贴板", destination: ListView())
                     Text("学习中")
                 }
             }
